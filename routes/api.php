@@ -23,7 +23,8 @@ Route::group(['middleware' => 'auth:api'], function() {
     Route::post('/register', 'Api\AuthController@register');
     Route::post('/login', 'Api\AuthController@login');
   });
-
   Route::post('/password/email', 'Api\ForgotPasswordController@sendResetLinkEmail');
+
+
   Route::post('/password/reset', 'Api\ResetPasswordController@reset');
 
